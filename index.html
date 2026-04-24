@@ -52,7 +52,134 @@
       </style>
     <![endif]-->
 
-    <!-- Internal <style> block retrofit comes in Section 2 -->
+    <style type="text/css">
+      /* ─── Client-specific fixes ─── */
+      body,
+      table,
+      td,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      td {
+        mso-line-height-rule: exactly;
+      }
+
+      /* ─── Outlook.com / Hotmail line-height fix ─── */
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+      /* ─── Reset ─── */
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+      table {
+        border-collapse: collapse !important;
+      }
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      /* ─── iOS blue-link override ─── */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* ─── Gmail blue-link override ─── */
+      u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      /* ─── Bulletproof button helper ─── */
+      .ghost-button {
+        display: inline-block;
+        padding: 12px 28px;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        color: #faf9f6;
+        background-color: #003e5a;
+        background-image: linear-gradient(
+          103deg,
+          rgba(0, 62, 90, 1) 0%,
+          rgba(0, 223, 255, 1) 100%
+        );
+        border-radius: 5px;
+        mso-padding-alt: 0;
+      }
+
+      /* ─── Responsive — ≤ 600px ─── */
+      @media only screen and (max-width: 600px) {
+        .responsive-table {
+          width: 480px !important;
+        }
+        .image {
+          width: 100% !important;
+          height: auto !important;
+          border: none !important;
+        }
+        .sale_items {
+          padding-bottom: 0px;
+        }
+        .featured_images {
+          width: 100% !important;
+          max-width: 300px !important;
+        }
+        .db {
+          display: block !important;
+          text-align: center !important;
+        }
+        .dw {
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 100% !important;
+        }
+        #item-info {
+          padding-left: 0 !important;
+        }
+      }
+
+      /* ─── Responsive — ≤ 480px ─── */
+      @media only screen and (max-width: 480px) {
+        .responsive-table {
+          width: 100% !important;
+        }
+      }
+    </style>
   </head>
 
   <body
