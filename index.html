@@ -243,6 +243,22 @@
           width: 100% !important;
         }
       }
+
+      /* ─── Hover lift on primary CTA (web preview only) ─── */
+      /* Wrapped in (hover: hover) so touchscreens and most email
+         clients skip it cleanly; fires in desktop browsers where
+         the portfolio piece is reviewed. */
+      @media (hover: hover) {
+        .cta-lift {
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+        }
+        .cta-lift:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 18px rgba(0, 62, 90, 0.35);
+        }
+      }
     </style>
   </head>
 
@@ -1129,6 +1145,7 @@
                                 <![endif]-->
                                 <!--[if !mso]><!-- -->
                                 <a
+                                  class="cta-lift"
                                   href="https://www.example.com/portfolio"
                                   target="_blank"
                                   style="
@@ -1141,6 +1158,12 @@
                                     letter-spacing: 0.5px;
                                     text-decoration: none;
                                     color: #faf9f6;
+                                    background-color: #003e5a;
+                                    background-image: linear-gradient(
+                                      103deg,
+                                      rgba(0, 62, 90, 1) 0%,
+                                      rgba(0, 223, 255, 1) 100%
+                                    );
                                     border-radius: 5px;
                                     line-height: 1.2;
                                   "
