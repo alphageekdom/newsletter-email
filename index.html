@@ -34,7 +34,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -48,6 +48,11 @@
         a,
         p {
           font-family: Arial, Helvetica, sans-serif !important;
+        }
+        .serif,
+        .serif-italic,
+        .numeral {
+          font-family: Georgia, 'Times New Roman', Times, serif !important;
         }
       </style>
     <![endif]-->
@@ -173,6 +178,43 @@
         }
       }
 
+      /* ─── Editorial utilities ─── */
+      .serif {
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-weight: 400;
+      }
+      .serif-italic {
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: 400;
+      }
+      .kicker {
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #5a7a8a;
+      }
+      .kicker-cyan {
+        color: #00dfff;
+      }
+      .numeral {
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-weight: 400;
+        font-style: italic;
+        color: #00dfff;
+      }
+      .hairline {
+        border-bottom: 1px solid #d4e5e2;
+        font-size: 0;
+        line-height: 0;
+        height: 1px;
+      }
+      .hairline-dark {
+        border-bottom: 1px solid #1a5470;
+      }
+
       /* ─── Responsive — ≤ 480px ─── */
       @media only screen and (max-width: 480px) {
         .responsive-table {
@@ -248,7 +290,85 @@
                 align="center"
                 style="box-shadow: rgba(38, 57, 77, 0.4) 0px 20px 30px -10px"
               >
-                <!-- Sections 4–11 (logo bar, header, rows, banner, footer) go here -->
+                <!-- ─── Top banner & logo bar ─── -->
+                <tr>
+                  <td
+                    align="center"
+                    bgcolor="#003E5A"
+                    height="60"
+                    style="
+                      background-color: #003e5a;
+                      background-image: linear-gradient(
+                        103deg,
+                        rgba(0, 62, 90, 1) 0%,
+                        rgba(0, 223, 255, 1) 100%
+                      );
+                      height: 60px;
+                      line-height: 60px;
+                      font-size: 0;
+                      mso-line-height-rule: exactly;
+                    "
+                  >
+                    <!--[if gte mso 9]>
+                      <v:rect
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        fill="true"
+                        stroke="false"
+                        style="
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          width: 600px;
+                          height: 60px;
+                          z-index: -1;
+                        "
+                      >
+                        <v:fill
+                          type="gradient"
+                          color="#003E5A"
+                          color2="#00DFFF"
+                          angle="103"
+                        />
+                      </v:rect>
+                      <v:shape
+                        xmlns:v="urn:schemas-microsoft-com:vml"
+                        style="
+                          position: absolute;
+                          left: 0;
+                          top: 0;
+                          width: 600px;
+                          height: 60px;
+                          z-index: -1;
+                        "
+                      />
+                    <![endif]-->
+
+                    <a
+                      href="https://www.example.com"
+                      target="_blank"
+                      style="
+                        text-decoration: none;
+                        display: inline-block;
+                        line-height: 60px;
+                      "
+                    >
+                      <img
+                        src="img/roof.png"
+                        alt="A|G Realty"
+                        title="A|G Realty"
+                        width="60"
+                        height="60"
+                        style="
+                          display: inline-block;
+                          vertical-align: middle;
+                          border: 0;
+                          outline: none;
+                          text-decoration: none;
+                        "
+                      />
+                    </a>
+                  </td>
+                </tr>
               </table>
             </td>
           </tr>
