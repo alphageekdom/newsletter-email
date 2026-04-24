@@ -160,6 +160,9 @@
         .stack-gap {
           padding-top: 28px !important;
         }
+        .stat-divider {
+          border-left: 0 !important;
+        }
         .featured_images {
           width: 100% !important;
           max-width: 300px !important;
@@ -183,6 +186,17 @@
           font-size: 10px !important;
           letter-spacing: 2px !important;
           padding: 3px 0 !important;
+        }
+        .stat-grid-col {
+          width: 100% !important;
+          display: block !important;
+          border-left: 0 !important;
+          padding: 24px 0 !important;
+          border-top: 1px solid #1a5470;
+        }
+        .stat-grid-col:first-child {
+          border-top: 0;
+          padding-top: 0;
         }
       }
 
@@ -1019,12 +1033,7 @@
                     >
                       <tr>
                         <!-- Image column -->
-                        <td
-                          class="dw db"
-                          valign="top"
-                          width="180"
-                          align="left"
-                        >
+                        <td class="dw db" valign="top" width="180" align="left">
                           <img
                             class="image featured_images"
                             src="img/apartments.jpg"
@@ -1349,7 +1358,457 @@
                   </td>
                 </tr>
 
-                <!-- ─── 03 / Performance goes here (Section 9) ─── -->
+                <!-- ─── 03 / Performance ─── -->
+                <tr bgcolor="#003E5A">
+                  <td
+                    bgcolor="#003E5A"
+                    style="
+                      background-color: #003e5a;
+                      padding: 60px 40px 60px 40px;
+                    "
+                  >
+                    <!-- Numbered kicker -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                    >
+                      <tr>
+                        <td
+                          align="left"
+                          style="
+                            font-family: Poppins, Arial, Helvetica, sans-serif;
+                            font-size: 11px;
+                            font-weight: 600;
+                            letter-spacing: 3px;
+                            text-transform: uppercase;
+                            color: #00dfff;
+                            line-height: 1;
+                          "
+                        >
+                          03 &nbsp;/&nbsp; Performance
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- 32px spacer -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                    >
+                      <tr>
+                        <td
+                          height="32"
+                          style="height: 32px; font-size: 0; line-height: 0"
+                        >
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Headline -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                    >
+                      <tr>
+                        <td
+                          align="left"
+                          style="
+                            font-family:
+                              'Instrument Serif', Georgia, 'Times New Roman',
+                              serif;
+                            font-size: 40px;
+                            font-weight: 400;
+                            color: #faf9f6;
+                            line-height: 1.1;
+                            letter-spacing: -0.3px;
+                          "
+                        >
+                          How the portfolio<br />is performing.
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- 40px spacer -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                    >
+                      <tr>
+                        <td
+                          height="40"
+                          style="height: 40px; font-size: 0; line-height: 0"
+                        >
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Stat grid — 3-up -->
+                    <table
+                      role="presentation"
+                      class="responsive-table"
+                      width="520"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      align="left"
+                    >
+                      <tr>
+                        <!-- Stat 1 -->
+                        <td
+                          class="dw db stat-grid-col"
+                          valign="top"
+                          width="173"
+                          align="left"
+                          style="padding: 0 12px 0 0"
+                        >
+                          <p
+                            style="
+                              margin: 0;
+                              font-family:
+                                'Instrument Serif', Georgia, 'Times New Roman',
+                                serif;
+                              font-style: italic;
+                              font-size: 56px;
+                              font-weight: 400;
+                              color: #00dfff;
+                              line-height: 1;
+                              letter-spacing: -1px;
+                            "
+                          >
+                            5–9%
+                          </p>
+                          <table
+                            role="presentation"
+                            width="100%"
+                            cellspacing="0"
+                            cellpadding="0"
+                            border="0"
+                          >
+                            <tr>
+                              <td
+                                height="12"
+                                style="
+                                  height: 12px;
+                                  font-size: 0;
+                                  line-height: 0;
+                                "
+                              >
+                                &nbsp;
+                              </td>
+                            </tr>
+                          </table>
+                          <p
+                            style="
+                              margin: 0;
+                              font-family:
+                                Poppins, Arial, Helvetica, sans-serif;
+                              font-size: 10px;
+                              font-weight: 600;
+                              letter-spacing: 2px;
+                              text-transform: uppercase;
+                              color: #b8d4db;
+                              line-height: 1.4;
+                            "
+                          >
+                            Target&nbsp;ROI
+                          </p>
+                        </td>
+
+                        <!-- Stat 2 -->
+                        <td
+                          class="dw db stat-grid-col"
+                          valign="top"
+                          width="173"
+                          align="left"
+                          style="
+                            padding: 0 12px;
+                            border-left: 1px solid #1a5470;
+                          "
+                        >
+                          <div style="padding-left: 16px">
+                            <p
+                              style="
+                                margin: 0;
+                                font-family:
+                                  'Instrument Serif', Georgia,
+                                  'Times New Roman', serif;
+                                font-style: italic;
+                                font-size: 56px;
+                                font-weight: 400;
+                                color: #00dfff;
+                                line-height: 1;
+                                letter-spacing: -1px;
+                              "
+                            >
+                              12
+                            </p>
+                            <table
+                              role="presentation"
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                            >
+                              <tr>
+                                <td
+                                  height="12"
+                                  style="
+                                    height: 12px;
+                                    font-size: 0;
+                                    line-height: 0;
+                                  "
+                                >
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </table>
+                            <p
+                              style="
+                                margin: 0;
+                                font-family:
+                                  Poppins, Arial, Helvetica, sans-serif;
+                                font-size: 10px;
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                                color: #b8d4db;
+                                line-height: 1.4;
+                              "
+                            >
+                              U.S.&nbsp;Markets
+                            </p>
+                          </div>
+                        </td>
+
+                        <!-- Stat 3 -->
+                        <td
+                          class="dw db stat-grid-col"
+                          valign="top"
+                          width="174"
+                          align="left"
+                          style="
+                            padding: 0 0 0 12px;
+                            border-left: 1px solid #1a5470;
+                          "
+                        >
+                          <div style="padding-left: 16px">
+                            <p
+                              style="
+                                margin: 0;
+                                font-family:
+                                  'Instrument Serif', Georgia,
+                                  'Times New Roman', serif;
+                                font-style: italic;
+                                font-size: 56px;
+                                font-weight: 400;
+                                color: #00dfff;
+                                line-height: 1;
+                                letter-spacing: -1px;
+                              "
+                            >
+                              Q1
+                            </p>
+                            <table
+                              role="presentation"
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                            >
+                              <tr>
+                                <td
+                                  height="12"
+                                  style="
+                                    height: 12px;
+                                    font-size: 0;
+                                    line-height: 0;
+                                  "
+                                >
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </table>
+                            <p
+                              style="
+                                margin: 0;
+                                font-family:
+                                  Poppins, Arial, Helvetica, sans-serif;
+                                font-size: 10px;
+                                font-weight: 600;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                                color: #b8d4db;
+                                line-height: 1.4;
+                              "
+                            >
+                              First&nbsp;Dividend
+                            </p>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- 40px spacer -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                    >
+                      <tr>
+                        <td
+                          height="40"
+                          style="height: 40px; font-size: 0; line-height: 0"
+                        >
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Body -->
+                    <table
+                      role="presentation"
+                      width="520"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      align="left"
+                    >
+                      <tr>
+                        <td
+                          align="left"
+                          style="
+                            font-family: Poppins, Arial, Helvetica, sans-serif;
+                            font-size: 15px;
+                            font-weight: 400;
+                            color: #b8d4db;
+                            line-height: 1.65;
+                          "
+                        >
+                          Quarterly distributions begin Q1. Dashboard access
+                          granted at funding. Pro-rated acquisitions reported
+                          monthly.
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- 28px spacer -->
+                    <table
+                      role="presentation"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                    >
+                      <tr>
+                        <td
+                          height="28"
+                          style="height: 28px; font-size: 0; line-height: 0"
+                        >
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Primary CTA -->
+                    <table
+                      role="presentation"
+                      cellspacing="0"
+                      cellpadding="0"
+                      border="0"
+                      align="left"
+                    >
+                      <tr>
+                        <td
+                          bgcolor="#003E5A"
+                          style="
+                            background-color: #003e5a;
+                            background-image: linear-gradient(
+                              103deg,
+                              rgba(0, 62, 90, 1) 0%,
+                              rgba(0, 223, 255, 1) 100%
+                            );
+                            border-radius: 5px;
+                            mso-padding-alt: 0;
+                          "
+                        >
+                          <!--[if mso]>
+                            <v:roundrect
+                              xmlns:v="urn:schemas-microsoft-com:vml"
+                              xmlns:w="urn:schemas-microsoft-com:office:word"
+                              href="https://www.example.com/performance"
+                              style="
+                                height: 44px;
+                                v-text-anchor: middle;
+                                width: 200px;
+                              "
+                              arcsize="12%"
+                              stroke="f"
+                              fillcolor="#003E5A"
+                            >
+                              <v:fill
+                                type="gradient"
+                                color="#003E5A"
+                                color2="#00DFFF"
+                                angle="103"
+                              />
+                              <w:anchorlock />
+                              <center
+                                style="
+                                  color: #faf9f6;
+                                  font-family: Arial, Helvetica, sans-serif;
+                                  font-size: 15px;
+                                  font-weight: 600;
+                                  letter-spacing: 0.5px;
+                                "
+                              >
+                                See the numbers &rarr;
+                              </center>
+                            </v:roundrect>
+                          <![endif]-->
+                          <!--[if !mso]><!-- -->
+                          <a
+                            href="https://www.example.com/performance"
+                            target="_blank"
+                            style="
+                              display: inline-block;
+                              padding: 12px 24px;
+                              font-family:
+                                Poppins, Arial, Helvetica, sans-serif;
+                              font-size: 15px;
+                              font-weight: 600;
+                              letter-spacing: 0.5px;
+                              text-decoration: none;
+                              color: #faf9f6;
+                              border-radius: 5px;
+                              line-height: 1.2;
+                            "
+                          >
+                            See the numbers &rarr;
+                          </a>
+                          <!--<![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- ─── Pull quote goes here (Section 10) ─── -->
               </table>
             </td>
           </tr>
