@@ -22,7 +22,7 @@ The signature typographic moment is the three-up performance grid: oversized ita
 
 - **XHTML 1.0 Transitional** with VML + Office namespaces for Outlook rendering parity
 - **MSO conditional stylesheets** for Outlook font fallbacks (Georgia substituting Instrument Serif)
-- **Bulletproof structure**: presentation tables, inline styles, VML fallbacks on every gradient surface (top banner, masthead, footer) and the primary CTA's `<v:roundrect>`
+- **Bulletproof structure**: presentation tables, inline styles, solid `bgcolor` fallbacks behind every gradient surface (top banner, masthead, footer), and a VML `<v:roundrect>` + `<w:anchorlock />` primary CTA for Outlook
 - **Responsive cascade**: 600px container → 480px at ≤600px → 100% at ≤480px, with utility classes (`.dw`, `.db`, `.stack-gap`, `.stat-grid-col`, `.deal-metric`) handling column stacking and divider-to-border transitions on mobile
 - **Dual-branch CTA pattern**: MSO branch renders via VML; non-MSO branch is a styled `<a>` with a `.cta-lift` hover wrapped in `@media (hover: hover)` — progressive enhancement that surfaces on the Netlify preview and degrades silently everywhere email clients render
 - **One primary CTA, density elsewhere**: a single primary button (`View the portfolio →`); supporting actions are text links (`See the full report →`, per-note `Read the note →`). Link density lives in the disclosure stack, not in calls to action
