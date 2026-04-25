@@ -10,7 +10,7 @@ A bulletproof HTML email designed as Issue 01 of a fictional quarterly investor 
 
 The piece uses a hybrid editorial / finance aesthetic — dual-font typography (Instrument Serif for display, Poppins for body), a numbered section structure borrowed from quarterly print publications, and a restrained cyan-on-navy palette.
 
-The masthead opens with a quote-as-standfirst — *"The markets that will hold through 2026 aren't the ones moving loudest — they're the ones moving steadiest"* — anchoring the editorial voice before any section content lands. What started as a separate pull-quote section was folded into the masthead late in development; what started as three numbered content rows (Portfolio / Asset Types / Performance) was consolidated into two (Portfolio absorbing the four-category asset list, Performance retaining the three-up stat grid). Both decisions killed a section each. The right move over padding for length.
+The masthead opens with a quote-as-standfirst — *"The markets that will hold through 2026 aren't the ones moving loudest — they're the ones moving steadiest"* — anchoring the editorial voice before any section content lands. What started as a separate pull-quote section was folded into the masthead late in development. The numbered structure went through two restructures: first compressed from three rows to two (Portfolio absorbing the four-category asset list, Performance keeping the three-up stat grid), then expanded back to four — adding **03 / Featured Acquisition** as a deal-card (cap rate, target IRR, hold period) and **04 / Market Notes** as a short editorial link list. Each pass traded length for purpose: every section earns its place.
 
 ![Masthead detail — wordmark, serif headline, italic-serif standfirst, attribution](screenshots/masthead.jpeg)
 
@@ -22,17 +22,20 @@ The signature typographic moment is the three-up performance grid: oversized ita
 
 - **XHTML 1.0 Transitional** with VML + Office namespaces for Outlook rendering parity
 - **MSO conditional stylesheets** for Outlook font fallbacks (Georgia substituting Instrument Serif)
-- **Bulletproof structure**: presentation tables, inline styles, VML fallbacks on every gradient surface (top banner, footer) and the primary CTA's `<v:roundrect>`
-- **Responsive cascade**: 600px container → 480px at ≤600px → 100% at ≤480px, with utility classes (`.dw`, `.db`, `.stack-gap`, `.stat-grid-col`) handling column stacking and divider-to-border transitions on mobile
+- **Bulletproof structure**: presentation tables, inline styles, VML fallbacks on every gradient surface (top banner, masthead, footer) and the primary CTA's `<v:roundrect>`
+- **Responsive cascade**: 600px container → 480px at ≤600px → 100% at ≤480px, with utility classes (`.dw`, `.db`, `.stack-gap`, `.stat-grid-col`, `.deal-metric`) handling column stacking and divider-to-border transitions on mobile
 - **Dual-branch CTA pattern**: MSO branch renders via VML; non-MSO branch is a styled `<a>` with a `.cta-lift` hover wrapped in `@media (hover: hover)` — progressive enhancement that surfaces on the Netlify preview and degrades silently everywhere email clients render
+- **One primary CTA, density elsewhere**: a single primary button (`View the portfolio →`); supporting actions are text links (`See the full report →`, per-note `Read the note →`). Link density lives in the disclosure stack, not in calls to action
 
 ![Full mobile view at 390px — stat grid stacked vertically, columns collapsed](screenshots/mobile.jpeg)
 
 ## Accessibility & craft
 
-- WCAG AA contrast — caption slate darkened to `#4a6a7a`, footer gradient endpoint muted to `#1a7a90` so white text stays legible across the full gradient
-- Meaningful alt text on all images; explicit `width` / `height` attributes for Outlook layout
-- CAN-SPAM compliance: physical postal address, unsubscribe link, sender identification
+- WCAG AA contrast across the email — body copy on navy at 7.34:1; muted slate unified to `#4a6a7a` (5.49:1 on cream); footer gradient endpoint muted to `#1a7a90` so white text stays legible across the full gradient
+- Meaningful alt text on all images and `aria-label` on the Featured Acquisition banner anchor; explicit `width` / `height` attributes for Outlook layout
+- View-in-browser fallback at the top of the email for render-failure clients
+- Investor-grade disclosure stack in the footer: past-performance, forward-looking-statements, and Reg D accredited-investor language with deep links to full disclosures and risk factors
+- CAN-SPAM / GDPR baseline: physical postal address, sender identification, Unsubscribe paired with Update Preferences, recipient-context line ("you're receiving this because…")
 - Plain-text fallback in `index.txt`
 
 ## Tested clients
