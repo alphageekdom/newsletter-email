@@ -736,23 +736,27 @@
                       </tr>
                     </table>
 
-                    <!-- Two-column row: text (360px) + image (160px) -->
-                    <table
-                      role="presentation"
-                      class="responsive-table"
-                      width="520"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      align="left"
-                    >
+                    <!-- Two-column row (hybrid coded): text (340px) + image (180px) -->
+                    <!-- Inline-block divs auto-stack in clients without @media support -->
+                    <div style="font-size: 0; line-height: 0; text-align: left;">
+                      <!--[if mso]>
+                      <table role="presentation" width="520" align="left" cellpadding="0" cellspacing="0" border="0">
                       <tr>
+                      <td valign="top" width="340" style="padding-right: 20px;">
+                      <![endif]-->
                         <!-- Text column -->
-                        <td
-                          class="dw db item-info"
-                          valign="top"
-                          width="340"
-                          style="padding-right: 20px"
+                        <div
+                          class="dw item-info"
+                          style="
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 100%;
+                            max-width: 340px;
+                            padding-right: 20px;
+                            box-sizing: border-box;
+                            font-size: 15px;
+                            line-height: 1.65;
+                          "
                         >
                           <!-- Headline -->
                           <p
@@ -1143,14 +1147,24 @@
                               </td>
                             </tr>
                           </table>
+                        </div>
+                        <!--[if mso]>
                         </td>
+                        <td valign="top" width="180" align="right">
+                        <![endif]-->
 
                         <!-- Image column -->
-                        <td
-                          class="dw db stack-gap"
-                          valign="top"
-                          width="180"
-                          align="right"
+                        <div
+                          class="dw stack-gap"
+                          style="
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 100%;
+                            max-width: 180px;
+                            text-align: right;
+                            font-size: 0;
+                            line-height: 0;
+                          "
                         >
                           <img
                             class="image featured_images"
@@ -1169,9 +1183,13 @@
                               border-radius: 2px;
                             "
                           />
+                        </div>
+                        <!--[if mso]>
                         </td>
-                      </tr>
-                    </table>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </div>
                   </td>
                 </tr>
 
