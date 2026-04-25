@@ -3174,7 +3174,10 @@
     <!-- Everything below is portfolio chrome for the Netlify render.     -->
     <!-- When deploying as actual email source, copy <body> through       -->
     <!-- </center> only — the email itself is fully self-contained.       -->
+    <!-- The [if !mso] gate below also hides this from Outlook in case    -->
+    <!-- the chrome ever ships unstripped.                                -->
     <!-- ============================================================== -->
+    <!--[if !mso]><!-->
     <style type="text/css">
       .colophon {
         background-color: #faf9f6;
@@ -3434,5 +3437,6 @@
         </div>
       </div>
     </section>
+    <!--<![endif]-->
   </body>
 </html>
