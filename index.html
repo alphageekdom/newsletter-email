@@ -3270,5 +3270,271 @@
         </tbody>
       </table>
     </center>
+
+    <!-- ============================================================== -->
+    <!-- HOSTED PREVIEW ONLY                                              -->
+    <!-- Everything below is portfolio chrome for the Netlify render.     -->
+    <!-- When deploying as actual email source, copy <body> through       -->
+    <!-- </center> only — the email itself is fully self-contained.       -->
+    <!-- ============================================================== -->
+    <style type="text/css">
+      .colophon {
+        background-color: #faf9f6;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        color: #003e5a;
+        padding: 96px 24px 120px 24px;
+        border-top: 1px solid #d4e5e2;
+      }
+      .colophon-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      .colophon-kick {
+        margin: 0 0 16px 0;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #4a6a7a;
+      }
+      .colophon-h2 {
+        margin: 0 0 18px 0;
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 1.15;
+        letter-spacing: -0.6px;
+        color: #003e5a;
+      }
+      .colophon-lede {
+        margin: 0 0 64px 0;
+        max-width: 640px;
+        font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 1.55;
+        color: #4a6a7a;
+      }
+      .colophon-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 56px;
+        margin-bottom: 96px;
+      }
+      .colophon-col h3 {
+        margin: 0 0 16px 0;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #d4e5e2;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #4a6a7a;
+      }
+      .colophon-col h3.tight {
+        margin-top: 32px;
+      }
+      .colophon-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.9;
+        color: #003e5a;
+      }
+      .colophon-previews {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+      .colophon-frame {
+        background-color: #ffffff;
+        border: 1px solid #d4e5e2;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 18px 48px rgba(0, 62, 90, 0.1);
+      }
+      .colophon-chrome {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 12px 16px;
+        background-color: #f1ece1;
+        border-bottom: 1px solid #d4e5e2;
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: #4a6a7a;
+      }
+      .colophon-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .colophon-chrome-meta {
+        margin-left: 14px;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        font-size: 11px;
+      }
+      .colophon-scroll {
+        max-height: 720px;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #b8d4db #faf9f6;
+      }
+      .colophon-scroll::-webkit-scrollbar {
+        width: 6px;
+      }
+      .colophon-scroll::-webkit-scrollbar-track {
+        background: #faf9f6;
+      }
+      .colophon-scroll::-webkit-scrollbar-thumb {
+        background: #b8d4db;
+        border-radius: 3px;
+      }
+      .colophon-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 0;
+      }
+      .colophon-mobile {
+        max-width: 320px;
+        margin: 0 auto;
+        border-radius: 24px;
+      }
+      .colophon-mobile .colophon-chrome {
+        justify-content: center;
+        background-color: #003e5a;
+        color: #b8d4db;
+        font-family: Poppins, Arial, Helvetica, sans-serif;
+        letter-spacing: 0.5px;
+      }
+      .colophon-label {
+        margin: 16px 0 0 0;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #4a6a7a;
+        text-align: center;
+      }
+      .colophon-hint {
+        display: block;
+        margin-top: 4px;
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: none;
+        color: #8aa5b0;
+        font-style: italic;
+      }
+      @media (max-width: 880px) {
+        .colophon { padding: 64px 20px 80px 20px; }
+        .colophon-h2 { font-size: 30px; }
+        .colophon-lede { font-size: 17px; margin-bottom: 48px; }
+        .colophon-grid { grid-template-columns: 1fr; gap: 40px; margin-bottom: 64px; }
+        .colophon-previews { grid-template-columns: 1fr; gap: 32px; }
+        .colophon-scroll { max-height: 560px; }
+      }
+    </style>
+
+    <section class="colophon" aria-label="Project colophon — how this email was built">
+      <div class="colophon-inner">
+        <p class="colophon-kick">Colophon</p>
+        <h2 class="colophon-h2">How this email was built.</h2>
+        <p class="colophon-lede">
+          Hand-coded responsive HTML email. Built with table-based structure,
+          inline CSS, Outlook-safe fallbacks, accessible alt text, and
+          mobile-first spacing — no framework, no preprocessor, no build step.
+        </p>
+
+        <div class="colophon-grid">
+          <div class="colophon-col">
+            <h3>Engineering</h3>
+            <ul>
+              <li>XHTML 1.0 Transitional</li>
+              <li>Table-based layout</li>
+              <li>Inline CSS</li>
+              <li>MSO conditional comments</li>
+              <li>VML ghost-tables for Outlook</li>
+              <li>600px max-width container</li>
+              <li>No JavaScript</li>
+            </ul>
+          </div>
+          <div class="colophon-col">
+            <h3>Accessibility &amp; resilience</h3>
+            <ul>
+              <li>Alt text on every image</li>
+              <li>WCAG AA contrast throughout</li>
+              <li>System-font fallbacks (Georgia, Arial)</li>
+              <li>No external font required to render</li>
+              <li>Mobile stacking via @media queries</li>
+              <li>Plain-text fallback (index.txt)</li>
+              <li>View-in-browser link at top</li>
+            </ul>
+          </div>
+          <div class="colophon-col">
+            <h3>Tested at</h3>
+            <ul>
+              <li>320px — small mobile</li>
+              <li>375px — iPhone standard</li>
+              <li>600px — email canonical</li>
+              <li>700px+ — desktop preview</li>
+            </ul>
+            <h3 class="tight">Tested in</h3>
+            <ul>
+              <li>Gmail (web · iOS · Android)</li>
+              <li>Apple Mail (macOS · iOS)</li>
+              <li>Outlook 365 (web)</li>
+              <li>Yahoo Mail</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="colophon-previews">
+          <div>
+            <div class="colophon-frame">
+              <div class="colophon-chrome" role="presentation">
+                <span class="colophon-dot" style="background-color: #ff5f57;"></span>
+                <span class="colophon-dot" style="background-color: #febc2e;"></span>
+                <span class="colophon-dot" style="background-color: #28c840;"></span>
+                <span class="colophon-chrome-meta">A|G Realty &nbsp;·&nbsp; The 2026 Investment Horizon</span>
+              </div>
+              <div class="colophon-scroll">
+                <img
+                  src="screenshots/desktop.jpeg"
+                  alt="Desktop render of the email — full editorial layout with masthead, four numbered sections, and footer disclosure stack"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <p class="colophon-label">
+              Desktop — 1200px capture
+              <span class="colophon-hint">scroll within the frame to see the full render</span>
+            </p>
+          </div>
+          <div>
+            <div class="colophon-frame colophon-mobile">
+              <div class="colophon-chrome" role="presentation">
+                <span class="colophon-chrome-meta" style="margin: 0;">9:41 &nbsp;·&nbsp; Mail</span>
+              </div>
+              <div class="colophon-scroll">
+                <img
+                  src="screenshots/mobile.jpeg"
+                  alt="Mobile render of the email at 390px width — three-up performance grid stacks vertically, two-column blocks collapse to single column"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <p class="colophon-label">
+              Mobile — iPhone 12 Pro
+              <span class="colophon-hint">scroll within the frame to see the full render</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
