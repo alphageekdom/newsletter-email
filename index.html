@@ -1806,23 +1806,26 @@
                       </tr>
                     </table>
 
-                    <!-- Deal metrics — 3-up -->
-                    <table
-                      role="presentation"
-                      class="responsive-table"
-                      width="100%"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      align="left"
-                    >
+                    <!-- Deal metrics — 3-up (hybrid coded) -->
+                    <!-- Inline-block divs auto-stack in clients without @media support -->
+                    <div style="font-size: 0; line-height: 0; text-align: left;">
+                      <!--[if mso]>
+                      <table role="presentation" width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
                       <tr>
+                      <td valign="top" width="33%">
+                      <![endif]-->
                         <!-- Cap rate -->
-                        <td
-                          class="dw db deal-metric"
-                          valign="top"
-                          width="33%"
-                          align="left"
+                        <div
+                          class="dw deal-metric"
+                          style="
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 33%;
+                            max-width: 33%;
+                            box-sizing: border-box;
+                            font-size: 9px;
+                            line-height: 1.4;
+                          "
                         >
                           <p
                             style="
@@ -1875,14 +1878,24 @@
                           >
                             Cap&nbsp;Rate
                           </p>
+                        </div>
+                        <!--[if mso]>
                         </td>
+                        <td valign="top" width="33%">
+                        <![endif]-->
 
                         <!-- Target IRR -->
-                        <td
-                          class="dw db deal-metric"
-                          valign="top"
-                          width="33%"
-                          align="left"
+                        <div
+                          class="dw deal-metric"
+                          style="
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 33%;
+                            max-width: 33%;
+                            box-sizing: border-box;
+                            font-size: 9px;
+                            line-height: 1.4;
+                          "
                         >
                           <p
                             style="
@@ -1935,14 +1948,24 @@
                           >
                             Target&nbsp;IRR
                           </p>
+                        </div>
+                        <!--[if mso]>
                         </td>
+                        <td valign="top" width="34%">
+                        <![endif]-->
 
                         <!-- Hold period -->
-                        <td
-                          class="dw db deal-metric"
-                          valign="top"
-                          width="34%"
-                          align="left"
+                        <div
+                          class="dw deal-metric"
+                          style="
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 34%;
+                            max-width: 34%;
+                            box-sizing: border-box;
+                            font-size: 9px;
+                            line-height: 1.4;
+                          "
                         >
                           <p
                             style="
@@ -1995,9 +2018,13 @@
                           >
                             Hold&nbsp;Period
                           </p>
+                        </div>
+                        <!--[if mso]>
                         </td>
-                      </tr>
-                    </table>
+                        </tr>
+                        </table>
+                        <![endif]-->
+                    </div>
                   </td>
                 </tr>
 
