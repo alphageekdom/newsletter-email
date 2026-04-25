@@ -40,7 +40,9 @@ The signature typographic moment is the three-up performance grid: oversized ita
 
 ## Tested clients
 
-Gmail (web, iOS, Android) · Apple Mail (macOS, iOS) · Outlook 365 (web) · Yahoo Mail
+**Tested in:** Gmail (web, iOS, Android) · Apple Mail (macOS, iOS) · Outlook 365 (web) · Yahoo Mail
+
+**Engineered for:** Outlook desktop / Word engine — via MSO conditional comments, Arial/Georgia font substitution, VML `<v:roundrect>` CTA, table-attribute widths, and `mso-line-height-rule: exactly`. Not directly tested in this version.
 
 ## Tech stack
 
