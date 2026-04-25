@@ -38,11 +38,9 @@ The signature typographic moment is the three-up performance grid: oversized ita
 - CAN-SPAM / GDPR baseline: physical postal address, sender identification, Unsubscribe paired with Update Preferences, recipient-context line ("you're receiving this because…")
 - Plain-text fallback in `index.txt`
 
-## Tested clients
+## Targeted clients
 
-**Tested in:** Gmail (web, iOS, Android) · Apple Mail (macOS, iOS) · Outlook 365 (web) · Yahoo Mail
-
-**Engineered for:** Outlook desktop / Word engine — via MSO conditional comments, Arial/Georgia font substitution, VML `<v:roundrect>` CTA, table-attribute widths, and `mso-line-height-rule: exactly`. Not directly tested in this version.
+Engineered for the broadest realistic client matrix: Gmail (web, iOS, Android), Apple Mail (macOS, iOS), Outlook 365 (web), Outlook desktop / Word engine, and Yahoo Mail — addressed via MSO conditional comments, Arial/Georgia font substitution, VML `<v:roundrect>` + `<w:anchorlock />` CTA, table-attribute widths, `mso-line-height-rule: exactly`, `.ExternalClass` fix, and Gmail/iOS blue-link overrides.
 
 ## Tech stack
 
