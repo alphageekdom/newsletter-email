@@ -2572,7 +2572,14 @@
                             </tr>
                           </table>
 
-                          <!-- Quick-links bar (Investor Login · Tax Documents · Disclosures · Contact IR) -->
+                          <!--
+                            Footer chrome links (this row + Unsubscribe/Preferences + Privacy/Terms below)
+                            use href="#" as portfolio placeholders. In a real deploy each would point to
+                            an ESP-specific URL (per-recipient unsubscribe token, hosted privacy/terms,
+                            etc.). aria-label expansions are correct copy regardless and improve screen-
+                            reader accessibility either way.
+                          -->
+                          <!-- Quick-links bar (Investor Login · Tax Documents · Contact) -->
                           <table
                             role="presentation"
                             width="100%"
@@ -2597,6 +2604,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Investor portal login"
                                   style="
                                     color: #ffffff;
                                     text-decoration: none;
@@ -2607,6 +2615,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Tax documents"
                                   style="
                                     color: #ffffff;
                                     text-decoration: none;
@@ -2617,6 +2626,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Contact investor relations"
                                   style="
                                     color: #ffffff;
                                     text-decoration: none;
@@ -2837,6 +2847,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Unsubscribe from this newsletter"
                                   style="
                                     color: #ffffff;
                                     text-decoration: none;
@@ -2847,6 +2858,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Update email preferences"
                                   style="
                                     color: #ffffff;
                                     text-decoration: none;
@@ -2904,6 +2916,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Privacy policy"
                                   style="
                                     color: #b8d4db;
                                     text-decoration: none;
@@ -2914,6 +2927,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Terms of service"
                                   style="
                                     color: #b8d4db;
                                     text-decoration: none;
@@ -2924,6 +2938,7 @@
                                 <a
                                   href="#"
                                   target="_blank"
+                                  aria-label="Do not sell my personal information"
                                   style="
                                     color: #b8d4db;
                                     text-decoration: none;
