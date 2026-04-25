@@ -51,3 +51,7 @@ No framework, no preprocessor, no build step. A single `index.html` at repo root
 ```sh
 open index.html
 ```
+
+## Disclaimer
+
+A|G Realty is a fictional brand created as an HTML email development project. No investment product, company, offering, or accredited-investor program referenced in this email is real. The disclosure stack, target returns, and Reg D / forward-looking-statement language are included to demonstrate the editorial and compliance conventions of investor communications — not to represent any real offering.
