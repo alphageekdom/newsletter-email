@@ -12,7 +12,7 @@ The piece uses a hybrid editorial / finance aesthetic — dual-font typography (
 
 The masthead opens with a quote-as-standfirst — *"The markets that will hold through 2026 aren't the ones moving loudest — they're the ones moving steadiest"* — anchoring the editorial voice before any section content lands. What started as a separate pull-quote section was folded into the masthead late in development. The numbered structure went through two restructures: first compressed from three rows to two (Portfolio absorbing the four-category asset list, Performance keeping the three-up stat grid), then expanded back to four — adding **03 / Featured Acquisition** as a deal-card (cap rate, target IRR, hold period) and **04 / Market Notes** as a short editorial link list. Each pass traded length for purpose: every section earns its place.
 
-![Masthead detail — wordmark, serif headline, italic-serif standfirst, attribution](screenshots/masthead.jpeg)
+![Masthead at mobile width — wordmark, serif headline, italic-serif standfirst, attribution](screenshots/masthead.jpeg)
 
 The signature typographic moment is the three-up performance grid: oversized italic serif numerals (`5–9%` / `12` / `Q1`) in cyan over navy, divided by thin teal vertical rules. On mobile the layout inverts — the vertical rules disappear and horizontal ones take their place, separating each stacked stat.
 
