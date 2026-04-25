@@ -312,7 +312,7 @@
       &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌
     </div>
 
-    <center style="width: 100%; background-color: #faf9f6">
+    <div role="article" aria-roledescription="email" lang="en" style="width: 100%; background-color: #faf9f6;">
       <!-- ─── Outer centering table ─── -->
       <table
         role="presentation"
@@ -3248,13 +3248,14 @@
           </tr>
         </tbody>
       </table>
-    </center>
+    </div>
 
     <!-- ============================================================== -->
     <!-- HOSTED PREVIEW ONLY                                              -->
     <!-- Everything below is portfolio chrome for the Netlify render.     -->
-    <!-- When deploying as actual email source, copy <body> through       -->
-    <!-- </center> only — the email itself is fully self-contained.       -->
+    <!-- When deploying as actual email source, copy <body> through the   -->
+    <!-- closing </div> of role="article" only — the email itself is     -->
+    <!-- fully self-contained.                                            -->
     <!-- The [if !mso] gate below also hides this from Outlook in case    -->
     <!-- the chrome ever ships unstripped.                                -->
     <!-- ============================================================== -->
