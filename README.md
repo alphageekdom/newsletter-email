@@ -44,7 +44,7 @@ Engineered for the broadest realistic client matrix: Gmail (web, iOS, Android), 
 
 ## Tech stack
 
-No framework, no preprocessor, no build step. A single `index.html` at repo root, email assets in `img/`, plain-text fallback in `index.txt`, documentation screenshots in `screenshots/`.
+No framework, no preprocessor, no build step. A single `index.html` at repo root, email assets in `images/`, plain-text fallback in `index.txt`, documentation screenshots in `screenshots/`.
 
 ## Running locally
 
