@@ -10,20 +10,20 @@ A bulletproof HTML email designed as Issue 01 of a fictional quarterly investor 
 
 The piece uses a hybrid editorial / finance aesthetic — dual-font typography (Instrument Serif for display, Poppins for body), a numbered section structure borrowed from quarterly print publications, and a restrained cyan-on-navy palette.
 
-The masthead opens with a quote-as-standfirst — *"The markets that will hold through 2026 aren't the ones moving loudest — they're the ones moving steadiest"* — anchoring the editorial voice before any section content lands. What started as a separate pull-quote section was folded into the masthead late in development. The numbered structure went through two restructures: first compressed from three rows to two (Portfolio absorbing the four-category asset list, Performance keeping the three-up stat grid), then expanded back to four — adding **03 / Featured Acquisition** as a deal-card (cap rate, target IRR, hold period) and **04 / Market Notes** as a short editorial link list. Each pass traded length for purpose: every section earns its place.
+The masthead opens with a quote-as-standfirst — *"The markets that will hold through 2026 aren't the ones moving loudest — they're the ones moving steadiest"* — anchoring the editorial voice before any section content lands. What started as a separate pull-quote section was folded into the masthead late in development. The numbered structure went through two restructures: first compressed from three rows to two (Portfolio absorbing the four-category asset list, Performance keeping the three-up stat grid), then expanded back to four — adding **03 / Featured Acquisition** as a deal-card (cap rate, target IRR, hold period) and **04 / Market Notes** as a short editorial link list. A later editorial pass swapped Portfolio's decorative 01–04 numbering for actual allocation percentages (38 / 28 / 18 / 16) and added a one-line data dek under each Market Note headline — taking each section from structure to signal. Every line earns its place.
 
 ![Masthead at mobile width — wordmark, serif headline, italic-serif standfirst, attribution](screenshots/masthead.jpeg)
 
-The signature typographic moment is the three-up performance grid: oversized italic serif numerals (`5–9%` / `12` / `Q1`) in cyan over navy, divided by thin teal vertical rules. On mobile the layout inverts — the vertical rules disappear and horizontal ones take their place, separating each stacked stat.
+The signature typographic moment is the three-up performance grid: oversized italic serif numerals (`5–9%` / `12` / `Mar`) in cyan over navy, divided by thin teal vertical rules. On mobile the layout inverts — the vertical rules disappear and horizontal ones take their place, separating each stacked stat.
 
 ![Performance stat grid — three-up italic serif numerals on navy with cyan vertical dividers](screenshots/stat-grid.jpeg)
 
 ## Technical approach
 
 - **XHTML 1.0 Transitional** with VML + Office namespaces for Outlook rendering parity
-- **MSO conditional stylesheets** for Outlook font fallbacks (Georgia substituting Instrument Serif)
+- **MSO conditional stylesheets** for Outlook font fallbacks: blanket Arial substitution scoped to body/div/td/span/a/p, with `h1, h2, h3, .serif` explicitly pinned to Georgia so the Instrument Serif headline cascade actually falls through to a serif in Outlook desktop
 - **Bulletproof structure**: presentation tables, inline styles, solid `bgcolor` fallbacks behind every gradient surface (top banner, masthead, footer), and a VML `<v:roundrect>` + `<w:anchorlock />` primary CTA for Outlook
-- **Responsive cascade**: 600px container → 480px at ≤600px → 100% at ≤480px, with utility classes (`.dw`, `.db`, `.stack-gap`, `.stat-grid-col`, `.deal-metric`) handling column stacking and divider-to-border transitions on mobile
+- **Responsive cascade**: 600px container → 480px at ≤600px → 100% at ≤480px, with utility classes (`.dw`, `.stack-gap`, `.stat-grid-col`, `.deal-metric`) handling column stacking and divider-to-border transitions on mobile
 - **Dual-branch CTA pattern**: MSO branch renders via VML; non-MSO branch is a styled `<a>` with a `.cta-lift` hover wrapped in `@media (hover: hover)` — progressive enhancement that surfaces on the Netlify preview and degrades silently everywhere email clients render
 - **One primary CTA, density elsewhere**: a single primary button (`View the portfolio →`); supporting actions are text links (`See the full report →`, per-note `Read the note →`). Link density lives in the disclosure stack, not in calls to action
 
@@ -31,14 +31,14 @@ The signature typographic moment is the three-up performance grid: oversized ita
 
 ## Accessibility & craft
 
-- **Semantic structure**: `<h1>` for the masthead, `<h2>` for each numbered section, `<h3>` for the three Market Notes — clean screen-reader rotor outline. Postal address wrapped in `<address>`; the email shell carries `role="article"` + `aria-roledescription="email"` + `lang="en"`
+- **Semantic structure**: `<h1>` for the masthead, `<h2>` for each numbered section, `<h3>` for the three Market Notes — clean screen-reader rotor outline. Each numbered section's outer `<td>` carries `role="region"` + `aria-labelledby` referencing its `<h2>`, so screen readers can navigate Portfolio / Performance / Featured Acquisition / Market Notes as landmarks rather than scrolling linearly. Postal address wrapped in `<address>`; the email shell carries `role="article"` + `aria-roledescription="email"` + `lang="en"`
 - **WCAG AA contrast across the email**: body copy on navy at 7.34:1; muted slate unified to `#4a6a7a` (5.49:1 on cream); footer gradient endpoint tightened to `#1a5a6e` so `#b8d4db` body text passes AA across the full gradient on Gmail / Apple Mail; primary CTA gradient endpoint darkened to `#006380` so the white button label passes AA across the full button width; masthead wordmark divider recolored from cyan to `#006380` to clear the cream backdrop
 - **Image accessibility**: meaningful alt text on every content image; decorative chrome (roof logos, social icons) carries `alt=""` with link purpose moved to `aria-label` on the parent anchor; the Featured Acquisition banner renders a styled italic-serif fallback card on mint when images are blocked. Explicit `width` / `height` attributes throughout for Outlook layout
-- **Link clarity (WCAG 2.4.4)**: every link has descriptive text or an explicit `aria-label`. Per-topic labels on the three otherwise-identical `Read the note →` anchors (Sun Belt rents, rate cycle outlook, secondary markets thesis); social links announce as "Follow A|G Realty on …"; brand wordmark pipes are `aria-hidden="true"` so screen readers render the wordmark as "AG Realty LLC" rather than "vertical bar"
+- **Link clarity (WCAG 2.4.4)**: every link has descriptive text or an explicit `aria-label`. Per-topic labels on the three otherwise-identical `Read the note →` anchors (Sun Belt rents, rate cycle outlook, secondary markets thesis); social links announce as "Follow A|G Realty on …"; brand wordmark pipes and decorative separators (`·`, `—`, `/`) in the issue bar and footer chrome are wrapped in `<span aria-hidden="true">` so screen readers render the wordmark as "AG Realty LLC" rather than "vertical bar" and skip the dividers entirely. Every `target="_blank"` carries `rel="noopener noreferrer"` for cross-context safety on the hosted preview
 - **Footer chrome affordances**: previously color-only differentiated links (Investor Login · Tax Documents · Contact · Unsubscribe · Update Preferences · Privacy · Terms · Do Not Sell My Info) carry a 1px translucent border-bottom so link affordance survives dark mode, color-blindness, and color-inverting clients
 - **Readable type minimums**: legal disclosures 12px, footer chrome ≥11px, deal metric labels bumped from 9px → 11px; view-in-browser fallback bumped to 12px and points at the hosted preview rather than an in-document anchor
 - **Email-client resilience**: solid `bgcolor` fallbacks behind every gradient surface; VML `<v:roundrect>` + `<w:anchorlock />` for the Outlook CTA, with the deprecated `<center>` tag documented as the Outlook Word-engine exception
-- **Compliance baseline**: CAN-SPAM postal address (in `<address>`), sender identification, Unsubscribe paired with Update Preferences, recipient-context line, Reg D / forward-looking-statement / past-performance disclosures with deep links to full disclosures and risk factors; ESP merge-tag patterns enumerated inline for production handoff
+- **Compliance baseline**: CAN-SPAM postal address (in `<address>`), sender identification, Unsubscribe paired with Update Preferences, recipient-context line, Reg D / forward-looking-statement / past-performance disclosures with deep links to full disclosures and risk factors; ESP merge-tag patterns enumerated in the [ESP merge-tag map](#esp-merge-tag-map) below for production handoff
 - **Plain-text fallback** in `index.txt`
 
 ## Targeted clients
@@ -47,7 +47,24 @@ Engineered for the broadest realistic client matrix: Gmail (web, iOS, Android), 
 
 ## Tech stack
 
-No framework, no preprocessor, no build step. A single `index.html` at repo root, email assets in `images/`, plain-text fallback in `index.txt`, documentation screenshots in `screenshots/`.
+No framework, no preprocessor, no build step. A single `index.html` at repo root, email assets in `images/`, plain-text fallback in `index.txt`, documentation screenshots in `screenshots/`. A `✂ SEND-CUT-HERE` marker separates the email body from the hosted-preview colophon — for an actual ESP send, copy `<body>` through the closing `</div>` of `role="article"` only.
+
+## ESP merge-tag map
+
+Footer chrome links use `href="#"` placeholders. On a real ESP send each maps to:
+
+| Anchor | Resolves to |
+|---|---|
+| View in browser | `{{view_in_browser_url}}` |
+| Investor Login | `{{investor_portal_url}}` |
+| Tax Documents | `{{tax_documents_url}}` |
+| Contact | `mailto:investor.relations@…` or `{{contact_url}}` |
+| Unsubscribe | `{{unsubscribe_url}}` (per-recipient token) |
+| Update Preferences | `{{preferences_url}}` (per-recipient token) |
+| Privacy / Terms / Do Not Sell My Info | static hosted `/privacy`, `/terms`, `/ccpa` |
+| See full disclosures / risk factors | `{{disclosures_url}}` / `{{risk_factors_url}}` (or static hosted) |
+
+In-document anchors (`#portfolio`, `#performance`, `#featured`, `#notes`, `#disclosures`) work in the hosted preview; on a real send they would point at hosted-version URLs (e.g. `ag-realty.com/q1-2026#portfolio`) since hash-only hrefs are unreliable across email clients.
 
 ## Deliverability note
 
