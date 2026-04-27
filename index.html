@@ -1082,6 +1082,18 @@
                                   mso-padding-alt: 0;
                                 "
                               >
+                                <!--
+                                  Bulletproof CTA: VML <v:roundrect> for Outlook Word engine,
+                                  HTML <a> for everything else.
+
+                                  The deprecated <center> tag inside the [if mso] block is
+                                  required by VML to vertically center the button label —
+                                  it's consumed only by Outlook's Word renderer and never
+                                  reaches an HTML5 parser or assistive tech. Do not replace
+                                  with <div> or remove; both break Outlook centering.
+                                  (See commit 86398ca: <center> was removed from the HTML
+                                  body; this VML occurrence is the one expected exception.)
+                                -->
                                 <!--[if mso]>
                                   <v:roundrect
                                     xmlns:v="urn:schemas-microsoft-com:vml"
