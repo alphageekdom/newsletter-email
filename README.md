@@ -49,6 +49,10 @@ Engineered for the broadest realistic client matrix: Gmail (web, iOS, Android), 
 
 No framework, no preprocessor, no build step. A single `index.html` at repo root, email assets in `images/`, plain-text fallback in `index.txt`, documentation screenshots in `screenshots/`.
 
+## Deliverability note
+
+This is a portfolio artifact, not a production send. The email-only payload (everything before the `✂ SEND-CUT-HERE` marker) is ~111 KB — a few KB over Gmail's 102 KB clipping threshold. In a real send, Gmail would show a "[Message clipped] View entire message" link before the disclosure block; the **View in browser** link at the top of the email is the intentional fallback path. For an actual production deploy, the inline `style=""` attributes would be minified at the ESP build step (10–15 KB savings) to clear the line.
+
 ## Running locally
 
 ```sh
