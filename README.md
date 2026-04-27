@@ -31,12 +31,15 @@ The signature typographic moment is the three-up performance grid: oversized ita
 
 ## Accessibility & craft
 
-- WCAG AA contrast across the email — body copy on navy at 7.34:1; muted slate unified to `#4a6a7a` (5.49:1 on cream); footer gradient endpoint muted to `#1a7a90` so white text stays legible across the full gradient
-- Meaningful alt text on all images and `aria-label` on the Featured Acquisition banner anchor; explicit `width` / `height` attributes for Outlook layout
-- View-in-browser fallback at the top of the email for render-failure clients
-- Investor-grade disclosure stack in the footer: past-performance, forward-looking-statements, and Reg D accredited-investor language with deep links to full disclosures and risk factors
-- CAN-SPAM / GDPR baseline: physical postal address, sender identification, Unsubscribe paired with Update Preferences, recipient-context line ("you're receiving this because…")
-- Plain-text fallback in `index.txt`
+- **Semantic structure**: `<h1>` for the masthead, `<h2>` for each numbered section, `<h3>` for the three Market Notes — clean screen-reader rotor outline. Postal address wrapped in `<address>`; the email shell carries `role="article"` + `aria-roledescription="email"` + `lang="en"`
+- **WCAG AA contrast across the email**: body copy on navy at 7.34:1; muted slate unified to `#4a6a7a` (5.49:1 on cream); footer gradient endpoint tightened to `#1a5a6e` so `#b8d4db` body text passes AA across the full gradient on Gmail / Apple Mail; primary CTA gradient endpoint darkened to `#006380` so the white button label passes AA across the full button width; masthead wordmark divider recolored from cyan to `#006380` to clear the cream backdrop
+- **Image accessibility**: meaningful alt text on every content image; decorative chrome (roof logos, social icons) carries `alt=""` with link purpose moved to `aria-label` on the parent anchor; the Featured Acquisition banner renders a styled italic-serif fallback card on mint when images are blocked. Explicit `width` / `height` attributes throughout for Outlook layout
+- **Link clarity (WCAG 2.4.4)**: every link has descriptive text or an explicit `aria-label`. Per-topic labels on the three otherwise-identical `Read the note →` anchors (Sun Belt rents, rate cycle outlook, secondary markets thesis); social links announce as "Follow A|G Realty on …"; brand wordmark pipes are `aria-hidden="true"` so screen readers render the wordmark as "AG Realty LLC" rather than "vertical bar"
+- **Footer chrome affordances**: previously color-only differentiated links (Investor Login · Tax Documents · Contact · Unsubscribe · Update Preferences · Privacy · Terms · Do Not Sell My Info) carry a 1px translucent border-bottom so link affordance survives dark mode, color-blindness, and color-inverting clients
+- **Readable type minimums**: legal disclosures 12px, footer chrome ≥11px, deal metric labels bumped from 9px → 11px; view-in-browser fallback bumped to 12px and points at the hosted preview rather than an in-document anchor
+- **Email-client resilience**: solid `bgcolor` fallbacks behind every gradient surface; VML `<v:roundrect>` + `<w:anchorlock />` for the Outlook CTA, with the deprecated `<center>` tag documented as the Outlook Word-engine exception
+- **Compliance baseline**: CAN-SPAM postal address (in `<address>`), sender identification, Unsubscribe paired with Update Preferences, recipient-context line, Reg D / forward-looking-statement / past-performance disclosures with deep links to full disclosures and risk factors; ESP merge-tag patterns enumerated inline for production handoff
+- **Plain-text fallback** in `index.txt`
 
 ## Targeted clients
 
