@@ -16,10 +16,10 @@ markets, currently weighted toward residential and
 commercial — the sectors holding steadiest through
 the rate cycle.
 
-  Residential     01
-  Commercial      02
-  Hospitality     03
-  Infrastructure  04
+  Residential     38%
+  Commercial      28%
+  Hospitality     18%
+  Infrastructure  16%
 
 View the portfolio →
 https://ag-realty.netlify.app/#portfolio
@@ -56,14 +56,19 @@ What we're watching.
 • Sun Belt · Rents
   Rent growth re-accelerates across Sun Belt
   multi-family.
+  +4.2% YoY in Q1, after eight quarters of
+  deceleration.
 
 • Rate Cycle · Outlook
   What a flatter yield curve means for closing
   timelines.
+  Closing timelines compressed ~21 days in Q4.
 
 • Secondary Markets · Thesis
   Why our 2026 capital is concentrating outside
   the top ten.
+  Six of our nine 2026 acquisitions sit outside
+  the top-10 metros.
 
 Read the notes →
 https://ag-realty.netlify.app/#notes
