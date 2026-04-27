@@ -2680,11 +2680,28 @@
                           </table>
 
                           <!--
-                            Footer chrome links (this row + Unsubscribe/Preferences + Privacy/Terms below)
-                            use href="#" as portfolio placeholders. In a real deploy each would point to
-                            an ESP-specific URL (per-recipient unsubscribe token, hosted privacy/terms,
-                            etc.). aria-label expansions are correct copy regardless and improve screen-
-                            reader accessibility either way.
+                            Footer chrome links use href="#" as portfolio placeholders.
+                            Each would resolve to an ESP merge tag or hosted URL on send:
+
+                              Investor Login       → {{investor_portal_url}}
+                              Tax Documents        → {{tax_documents_url}}
+                              Contact              → mailto:investor.relations@... or {{contact_url}}
+                              Unsubscribe          → {{unsubscribe_url}}     (per-recipient token)
+                              Update Preferences   → {{preferences_url}}     (per-recipient token)
+                              Privacy              → static hosted /privacy
+                              Terms                → static hosted /terms
+                              Do Not Sell My Info  → static hosted /ccpa
+                              See full disclosures → {{disclosures_url}}     (or static hosted)
+                              Risk factors         → {{risk_factors_url}}    (or static hosted)
+
+                            aria-label expansions are correct copy regardless and improve
+                            screen-reader accessibility either way.
+
+                            In-document anchors (#portfolio, #performance, #featured, #notes,
+                            #disclosures) are intentionally functional in the hosted Netlify
+                            preview so reviewers can scroll through the layout. On a real send,
+                            these would point at hosted-version URLs (e.g. ag-realty.com/q1-2026
+                            #portfolio) since hash-only hrefs are unreliable across email clients.
                           -->
                           <!-- Quick-links bar (Investor Login · Tax Documents · Contact) -->
                           <table
